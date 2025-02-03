@@ -1,24 +1,6 @@
 name: JavaScript tests
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/js.yml'
-      - 'yarn.lock'
-      - '**/*.json'
-      - '**/*.js'
-      - '**/*.ts'
-      - '**/*.tsx'
-  pull_request:
-    paths:
-      - '.github/workflows/js.yml'
-      - 'yarn.lock'
-      - '**/*.json'
-      - '**/*.js'
-      - '**/*.ts'
-      - '**/*.tsx'
+on: [push, pull_request]
 
 jobs:
   js-tests:

@@ -49,7 +49,8 @@
   }
 
 #if TARGET_OS_IPHONE
-  UIEdgeInsets safeAreaInsets = self.safeAreaInsets;
+  UIWindow *window = UIApplication.sharedApplication.windows.firstObject;
+  UIEdgeInsets safeAreaInsets = window.safeAreaInsets;
 #elif TARGET_OS_OSX
   NSEdgeInsets safeAreaInsets;
   if (@available(macOS 11.0, *)) {
